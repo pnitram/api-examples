@@ -50,9 +50,9 @@ Shell script examples on how to retrieve accessToken and account information.
 The following links provides detailed description of the REST interfaces. This includes how to construct your requests and what response to expect.
 
 
-https://api.sbanken.no/Bank/swagger
+https://api.sbanken.no/exec.bank/swagger
 
-https://api.sbanken.no/Customers/swagger
+https://api.sbanken.no/exec.customers/swagger
 
 ### Authentication
 
