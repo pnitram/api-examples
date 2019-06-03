@@ -23,7 +23,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class SbankenClient {
 
     private static final String IDENTITY_SERVER_URL = "https://auth.sbanken.no/identityserver/connect/token";
-    private static final String ACCOUNT_SERVICE_URL = "https://api.sbanken.no/bank/api/v1/accounts/";
+    private static final String ACCOUNT_SERVICE_URL = "https://api.sbanken.no/exec.bank/api/v1/accounts/";
     private final static Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     /**

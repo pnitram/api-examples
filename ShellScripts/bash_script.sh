@@ -19,7 +19,7 @@ requestBody='grant_type=client_credentials'
 
 token=$(curl -q -u "$clientId:$secret" -H "$acceptHeader" -H "$contentTypeHeader" -d "$requestBody" 'https://auth.sbanken.no/IdentityServer/connect/token' 2>/dev/null| jq -r .access_token)
 
-accounts=$(curl -q -H "customerId: $userId" -H "Authorization: Bearer $token" "https://api.sbanken.no/Bank/api/v1/Accounts"  2>/dev/null)
+accounts=$(curl -q -H "customerId: $userId" -H "Authorization: Bearer $token" "https://api.sbanken.no/exec.bank/api/v1/Accounts"  2>/dev/null)
 matches=$(echo $accounts|jq -r .availableItems)
 
 for i in $(seq 0 $(($matches - 1)))

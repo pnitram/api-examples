@@ -11,7 +11,7 @@ namespace SampleApplication
     public class Account
     {
         public string AccountId { get; set; }
-        // add additional fields as needed to fully describe the account structure. See: https://api.sbanken.no/Bank/swagger
+        // add additional fields as needed to fully describe the account structure. See: https://api.sbanken.no/exec.bank/swagger
 
     }
 }

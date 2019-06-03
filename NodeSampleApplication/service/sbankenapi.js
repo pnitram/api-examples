@@ -43,7 +43,7 @@ exports.getAccessToken = () => {
 }
 
 exports.getAccountDetails = (accessToken) => {
-    var accountServiceUrl = "https://api.sbanken.no/bank/api/v1/accounts/"; //
+    var accountServiceUrl = "https://api.sbanken.no/exec.bank/api/v1/accounts/"; //
 
     // use accessToken to request accounts (the bearer token (accessToken) is put on the request header prior to sending the request)
 
@@ -68,7 +68,7 @@ exports.getAccountDetails = (accessToken) => {
 }
 
 exports.getAccountNumberDetails = (accountId, accessToken) => {
-    var accountNumberDetailsUrl = "https://api.sbanken.no/bank/api/v1/accounts/"+accountId; //
+    var accountNumberDetailsUrl = "https://api.sbanken.no/exec.bank/api/v1/accounts/"+accountId; //
 
     // use accessToken to request accounts (the bearer token (accessToken) is put on the request header prior to sending the request)
 
@@ -94,7 +94,7 @@ exports.getAccountNumberDetails = (accountId, accessToken) => {
 
 
 exports.getAccountTransactions = (accountId, accessToken) => {
-    var requestUrl = "https://api.sbanken.no/bank/api/v1/transactions/"+accountId; //
+    var requestUrl = "https://api.sbanken.no/exec.bank/api/v1/transactions/"+accountId; //
 
     // use accessToken to request accounts (the bearer token (accessToken) is put on the request header prior to sending the request)
 

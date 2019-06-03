@@ -28,11 +28,13 @@ Shell script examples on how to retrieve accessToken and account information.
 
 ## Documentation 
 
+# Update June 2019
+* Changed the example URLs to target /exec.bank instead of /bank
+
 # Update November 2018
 * Added documentation for [transactionTypes](./Documentation/) for the TransactionsAPI
 
 # Update September 2018
-
 * Changed authentication endpoint from https://api.sbanken.no/identityserver to https://auth.sbanken.no/identityserver
 
 
@@ -40,7 +42,7 @@ Shell script examples on how to retrieve accessToken and account information.
 
 * We have stopped using customerId as a part of the API URL. Instead we require all API requests to include the customerId as a http header. See swagger for more information.
 * We have rolled back all APIs to start on V1
-* We have stopped using AccountNumber as part of the URL. Instead we require all Account API requests to include the AccountId as retrieved from HTTP GET /Bank/api/v1/Accounts (see powershell script example)
+* We have stopped using AccountNumber as part of the URL. Instead we require all Account API requests to include the AccountId as retrieved from HTTP GET /exec.bank/api/v1/Accounts (see powershell script example)
 * Update of IdentityServer requires Clients to form-urlencode ClientId and Secret prior to Base64-encoding the Authorization header. This is according to specification in RFC6749. See [DotNetCoreSampleApplication](./DotNetCoreSampleApplication/) (updated to IdentityModel 3.6.1 which does this automatically) and [ShellScripts](./ShellScripts/) example.
 
 ### Swagger

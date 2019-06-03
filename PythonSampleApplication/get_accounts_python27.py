@@ -11,7 +11,7 @@ import pprint
 CLIENT_ID = ''  # Get from https://secure.sbanken.no/Personal/ApiBeta/Info/
 SECRET = ''  # Get this from https://secure.sbanken.no/Personal/ApiBeta/Info/
 AUTH_URL = 'https://auth.sbanken.no/identityserver/connect/token'
-ACCOUNTS_URL = 'https://api.sbanken.no/bank/api/v1/accounts'
+ACCOUNTS_URL = 'https://api.sbanken.no/exec.bank/api/v1/accounts'
 CUSTOMER_ID = ''  # Your own personnummer
 
 
