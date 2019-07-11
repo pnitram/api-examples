@@ -6,6 +6,8 @@
 # dnf install jq
 
 # setup
+#
+# remember to urlencode clientId and secret
 clientId='*******************'
 secret='******************************'
 userId='***********'
