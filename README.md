@@ -28,6 +28,9 @@ Shell script examples on how to retrieve accessToken and account information.
 
 ## Documentation 
 
+# Update July 2019
+* Old scopes are deprecated. New scopes are available. Visit the API Beta self service pages in the Internet Bank to review the new scopes and activate any desired scopes.
+
 # Update June 2019
 * Changed the example URLs to target /exec.bank instead of /bank
 
