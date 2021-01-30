@@ -47,6 +47,7 @@ for i in $(seq 0 $(($matches - 1)))
 do
     accountNumber=$(echo $accounts | jq -r ".items[$i].accountNumber")
     balance=$(echo $accounts | jq -r ".items[$i].balance")
+    available=$(echo $accounts | jq -r ".items[$i].available")
     name=$(echo $accounts | jq -r ".items[$i].name")
-    printf "%-20s\t%-11s\t%8.2f\n" "$name" "$accountNumber" $balance
+    printf "%-20s\t%-11s\t%8.2f\t%8.2f\n" "$name" "$accountNumber" $balance $available
 done
