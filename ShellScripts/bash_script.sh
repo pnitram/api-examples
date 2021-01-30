@@ -12,6 +12,25 @@ clientId='*******************'
 secret='******************************'
 userId='***********'
 
+# Url encode
+urlencode() {
+  string=$1; format=; set --
+  while [ -n "$string" ]; do
+    tail=${string#?}
+    head=${string%$tail}
+    case $head in
+      [-._~0-9A-Za-z]) format=$format%c; set -- "$@" "$head";;
+      *) format=$format%%%02x; set -- "$@" "'$head";;
+    esac
+    string=$tail
+  done
+  printf "$format\\n" "$@"
+}
+
+encodedData1=$(urlencode $clientId)
+encodedData2=$(urlencode $secret)
+
+
 # headers
 acceptHeader='Accept: application/json'
 contentTypeHeader='Content-Type: application/x-www-form-urlencoded; charset=utf-8'
